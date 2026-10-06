@@ -29,8 +29,8 @@ export const work: WorkItem[] = [
     slug: "ops-trajectory-rx",
     title: "Ops trajectory RX",
     blurb:
-      "Trajectory IR for field-service agents: invariants, critical-step localization, failure taxonomy.",
-    tags: ["TypeScript", "Evals"],
+      "Trajectory IR for field-service agents: invariants, critical-step localization, failure taxonomy. TypeScript demo + Python core (runnable via uv).",
+    tags: ["TypeScript", "Python", "Evals"],
     repo: "https://github.com/CTavitian/ops-trajectory-rx",
     caseStudy: true,
   },
@@ -38,8 +38,8 @@ export const work: WorkItem[] = [
     slug: "conformal-dispatch",
     title: "Conformal dispatch",
     blurb:
-      "Predictive risk with conformal abstention — commit, escalate, or hold. No fake accuracy claims.",
-    tags: ["TypeScript", "Predictive"],
+      "Predictive risk with conformal abstention — commit, escalate, or hold. No fake accuracy claims. TypeScript demo + Python core (runnable via uv).",
+    tags: ["TypeScript", "Python", "Predictive"],
     repo: "https://github.com/CTavitian/conformal-dispatch",
     caseStudy: true,
   },

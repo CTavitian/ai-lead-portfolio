@@ -15,8 +15,8 @@ export const workDetails: Record<string, WorkDetail> = {
     slug: "ops-trajectory-rx",
     title: "Ops trajectory RX",
     blurb:
-      "Trajectory IR for field-service agents: invariants, critical-step localization, failure taxonomy.",
-    tags: ["TypeScript", "Evals"],
+      "Trajectory IR for field-service agents: invariants, critical-step localization, failure taxonomy. TypeScript demo + Python core (runnable via uv).",
+    tags: ["TypeScript", "Python", "Evals"],
     repo: "https://github.com/CTavitian/ops-trajectory-rx",
     problem: [
       "A failed eval case tells you something broke. It rarely says which step broke, or which ops failure mode it was.",
@@ -49,8 +49,8 @@ export const workDetails: Record<string, WorkDetail> = {
     slug: "conformal-dispatch",
     title: "Conformal dispatch",
     blurb:
-      "Predictive risk with conformal abstention — commit, escalate, or hold. No fake accuracy claims.",
-    tags: ["TypeScript", "Predictive"],
+      "Predictive risk with conformal abstention — commit, escalate, or hold. No fake accuracy claims. TypeScript demo + Python core (runnable via uv).",
+    tags: ["TypeScript", "Python", "Predictive"],
     repo: "https://github.com/CTavitian/conformal-dispatch",
     problem: [
       "Automation commit decisions based on a single risk score invite overconfidence.",
