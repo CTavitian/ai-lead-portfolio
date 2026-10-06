@@ -9,7 +9,7 @@ export type Note = {
 export const notes: Note[] = [
   {
     slug: "localize-the-failure-step",
-    title: "Pass/fail is not enough — localize the failure step",
+    title: "Pass/fail is not enough: localize the failure step",
     date: "2026-10-07",
     summary:
       "Trajectory invariants and a field-service failure taxonomy beat a single red checkmark.",

@@ -7,7 +7,6 @@ export type ContactConfig = {
   githubUser: string;
   /** TODO Overlord: confirm LinkedIn URL */
   linkedin: string;
-  /** TODO Overlord: confirm public email */
   email: string;
 };
 
@@ -15,5 +14,5 @@ export const contact: ContactConfig = {
   github: "https://github.com/CTavitian",
   githubUser: "CTavitian",
   linkedin: "",
-  email: "kaspar@venode.ai",
+  email: "ctavityan@gmail.com",
 };
