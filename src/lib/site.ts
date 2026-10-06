@@ -26,6 +26,48 @@ export type WorkItem = {
 
 export const work: WorkItem[] = [
   {
+    slug: "ops-trajectory-rx",
+    title: "Ops trajectory RX",
+    blurb:
+      "Trajectory IR for field-service agents: invariants, critical-step localization, failure taxonomy.",
+    tags: ["TypeScript", "Evals"],
+    repo: "https://github.com/CTavitian/ops-trajectory-rx",
+    caseStudy: true,
+  },
+  {
+    slug: "conformal-dispatch",
+    title: "Conformal dispatch",
+    blurb:
+      "Predictive risk with conformal abstention — commit, escalate, or hold. No fake accuracy claims.",
+    tags: ["TypeScript", "Predictive"],
+    repo: "https://github.com/CTavitian/conformal-dispatch",
+    caseStudy: true,
+  },
+  {
+    slug: "field-skill-forge",
+    title: "Field skill forge",
+    blurb:
+      "Package and binary-eval ops Agent Skills with fail-closed layers.",
+    tags: ["TypeScript", "Skills"],
+    repo: "https://github.com/CTavitian/field-skill-forge",
+  },
+  {
+    slug: "side-effect-replay",
+    title: "Side-effect replay",
+    blurb:
+      "Freeze bad agent runs into approval-digest CI gates.",
+    tags: ["TypeScript", "Governance"],
+    repo: "https://github.com/CTavitian/side-effect-replay",
+  },
+  {
+    slug: "judgment-panel",
+    title: "Judgment panel",
+    blurb:
+      "Multi-judge commit/hold/block router with an evidence ledger.",
+    tags: ["TypeScript", "Governance"],
+    repo: "https://github.com/CTavitian/judgment-panel",
+  },
+  {
     slug: "agent-eval-harness",
     title: "Agent evaluation harness",
     blurb:
@@ -49,7 +91,6 @@ export const work: WorkItem[] = [
       "Allow-listed tools with a red-team suite that fails on escapes.",
     tags: ["TypeScript", "MCP"],
     repo: "https://github.com/CTavitian/mcp-tool-boundary",
-    caseStudy: true,
   },
   {
     slug: "field-service-agent",

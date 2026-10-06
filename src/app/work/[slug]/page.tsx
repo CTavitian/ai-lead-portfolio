@@ -49,7 +49,14 @@ export default async function WorkPage({
           <p className="lede" style={{ fontSize: "1.125rem" }}>
             {item.blurb}
           </p>
-          {slug === "agent-eval-harness" ? (
+          {item.repo ? (
+            <p className="note">
+              Source:{" "}
+              <a href={item.repo} rel="noopener noreferrer">
+                {item.repo.replace("https://", "")}
+              </a>
+            </p>
+          ) : slug === "agent-eval-harness" ? (
             <p className="note">
               Source:{" "}
               <a href={site.harnessRepo} rel="noopener noreferrer">

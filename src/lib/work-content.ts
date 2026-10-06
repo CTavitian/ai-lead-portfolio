@@ -11,6 +11,74 @@ export type WorkDetail = WorkItem & {
 };
 
 export const workDetails: Record<string, WorkDetail> = {
+  "ops-trajectory-rx": {
+    slug: "ops-trajectory-rx",
+    title: "Ops trajectory RX",
+    blurb:
+      "Trajectory IR for field-service agents: invariants, critical-step localization, failure taxonomy.",
+    tags: ["TypeScript", "Evals"],
+    repo: "https://github.com/CTavitian/ops-trajectory-rx",
+    problem: [
+      "A failed eval case tells you something broke. It rarely says which step broke, or which ops failure mode it was.",
+      "In field service, skip-inspection, approval bypass, and wrong-asset actions need different fixes. One red checkmark conflates them.",
+    ],
+    approach: [
+      "Define a small trajectory.v1 IR: observe, tool, decide, approve, side_effect.",
+      "Encode static and dynamic invariants in YAML (inspect-before-close, deny tools, SLA before reschedule, asset match).",
+      "Localize the first critical violation into an eight-class taxonomy with a deterministic mock judge — no API key required for CI.",
+    ],
+    shipped: [
+      "Public repo CTavitian/ops-trajectory-rx: checker CLI, field-service policy, six fixture traces (three pass / three fail).",
+      "Vitest coverage proving planted bugs localize to the expected step and class.",
+    ],
+    measured: [
+      "Each run reports passed/failed, critical_step index, and taxonomy label in JSON.",
+      "Planted skip-inspection and hallucinated-asset fixtures localize to the intended steps in tests.",
+    ],
+    decided: [
+      "Deterministic judges first. LLM judges stay optional adapters.",
+      "Domain vocabulary in the schema (job_id, crew, SLA) beats generic chat traces.",
+      "Non-goal: not a hosted observability product and not a full AgentRx clone.",
+    ],
+    differently: [
+      "Add dynamic invariant plugins per customer policy pack.",
+      "Export JUnit for trajectory gates beside case-suite gates.",
+    ],
+  },
+  "conformal-dispatch": {
+    slug: "conformal-dispatch",
+    title: "Conformal dispatch",
+    blurb:
+      "Predictive risk with conformal abstention — commit, escalate, or hold. No fake accuracy claims.",
+    tags: ["TypeScript", "Predictive"],
+    repo: "https://github.com/CTavitian/conformal-dispatch",
+    problem: [
+      "Automation commit decisions based on a single risk score invite overconfidence.",
+      "Regulated dispatch needs an explicit abstain path when the model is unsure.",
+    ],
+    approach: [
+      "Score failure risk from simple telemetry features (runtime hours, alarm rate, PM age, criticality).",
+      "Wrap scores with split conformal calibration so each asset gets an interval and a prediction set.",
+      "Map sets to commit / escalate / hold. Criticality-3 never auto-commits.",
+    ],
+    shipped: [
+      "Public repo CTavitian/conformal-dispatch: CLI, synthetic fixtures, backtest summary with empirical coverage.",
+      "Tests with a loose coverage band — honest about finite-sample noise, not a fabricated 98% claim.",
+    ],
+    measured: [
+      "Holdout empirical coverage is reported against target 1−α on every CLI run.",
+      "Decision counts (commit/escalate/hold) are written into the JSON report.",
+    ],
+    decided: [
+      "Abstention is a first-class outcome, not an error.",
+      "Synthetic fixtures must be labelled as synthetic in the README.",
+      "Predictive work sits next to agents only when uncertainty can refuse the action.",
+    ],
+    differently: [
+      "Swap the toy logistic score for a calibrated model once real CMMS extracts exist.",
+      "Wire hold decisions into the judgment panel evidence ledger.",
+    ],
+  },
   "agent-eval-harness": {
     slug: "agent-eval-harness",
     title: "Agent evaluation harness",
