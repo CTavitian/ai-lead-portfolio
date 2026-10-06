@@ -10,7 +10,6 @@ export const site = {
   email: contact.email,
   repo: "https://github.com/CTavitian/ai-lead-portfolio",
   harnessRepo: "https://github.com/CTavitian/agent-eval-harness",
-  workRights: "Sydney-based, full Australian work rights",
 } as const;
 
 export type WorkItem = {

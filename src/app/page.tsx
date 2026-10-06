@@ -26,7 +26,6 @@ export default function HomePage() {
             that stay inside clear bounds, and measuring whether the thing
             actually helps.
           </p>
-          <p className="note">{site.workRights}.</p>
         </div>
       </section>
 
