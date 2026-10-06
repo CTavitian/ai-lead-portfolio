@@ -16,6 +16,7 @@ export const workDetails: Record<string, WorkDetail> = {
     title: "Agent evaluation harness",
     blurb:
       "A small CLI that runs YAML test cases against a mock or live agent and scores the answers.",
+    tags: ["TypeScript", "CLI"],
     problem: [
       "Most agent demos look fine in a chat window and fall apart on the second edge case.",
       "I needed a way to write expected behaviour as fixtures, run them often, and see pass or fail without hand-waving.",
@@ -51,6 +52,7 @@ export const workDetails: Record<string, WorkDetail> = {
     title: "Ops automation for field service",
     blurb:
       "How I pick AI work in regulated, schedule-heavy operations, and what I leave alone.",
+    tags: ["Write-up"],
     problem: [
       "Field-service work is full of repeating paperwork: job triage, scheduling notes, defect summaries, compliance evidence packs.",
       "People waste time on copy-paste. Models waste time when you point them at jobs that need a licence, a signature, or a site walk.",
@@ -86,6 +88,7 @@ export const workDetails: Record<string, WorkDetail> = {
     title: "Secure AI and MCP tooling",
     blurb:
       "Guardrails, tool boundaries, and why I treat agents like junior staff with limited access.",
+    tags: ["Write-up"],
     problem: [
       "Tool-using agents are useful and dangerous for the same reason: they can act.",
       "MCP and similar bridges make it easy to hand a model a filesystem, a ticket API, or a browser. That needs the same care as giving a new hire admin rights.",
