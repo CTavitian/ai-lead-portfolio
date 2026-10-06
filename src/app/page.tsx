@@ -3,109 +3,192 @@ import { site, work } from "@/lib/site";
 
 export default function HomePage() {
   return (
-    <div className="narrow">
-      <section className="hero">
-        <h1>{site.name}</h1>
-        <p className="role">
-          {site.role} · {site.location}
+    <div className="wrap">
+      <section className="band hero">
+        <p className="band-label" aria-hidden="true">
+          About
         </p>
-        <p>
-          I spent years running field-service and fire-protection operations.
-          Crews, compliance, margins, and schedules. Now I take that judgment into
-          AI implementation: picking work that pays off, building agents that stay
-          inside clear bounds, and measuring whether the thing actually helps.
-        </p>
-        <p className="note">{site.workRights}.</p>
+        <div className="band-body">
+          <h1>{site.name}</h1>
+          <p className="role">
+            {site.role}
+            <span className="sep" aria-hidden="true">
+              ·
+            </span>
+            {site.location}
+          </p>
+          <p className="lede">
+            I spent years running field-service and fire-protection operations.
+            Crews, compliance, margins, and schedules. Now I take that judgment
+            into AI implementation: picking work that pays off, building agents
+            that stay inside clear bounds, and measuring whether the thing
+            actually helps.
+          </p>
+          <p className="note">{site.workRights}.</p>
+        </div>
       </section>
 
-      <section className="section" id="work">
-        <h2>Selected work</h2>
-        <ul className="work-list">
-          {work.map((item) => (
-            <li key={item.slug}>
-              <Link className="title" href={`/work/${item.slug}/`}>
-                {item.title}
-              </Link>
-              <p className="blurb">{item.blurb}</p>
-            </li>
-          ))}
-        </ul>
-        <p className="note" style={{ marginTop: "1.25rem" }}>
-          Venode Labs is where I build and test agent and ops-automation work.
-          Site:{" "}
-          <a href={site.venode} rel="noopener noreferrer">
-            venode.ai
-          </a>
-          .
-        </p>
-      </section>
-
-      <section className="section" id="credentials">
-        <h2>Credentials</h2>
-        <ul className="cred-list">
-          <li>
-            Harvard CS50&apos;s Introduction to AI with Python{" "}
-            <span className="meta">completed</span>
-          </li>
-          <li>
-            Microsoft Applied Skills
-            <ul className="cred-sub">
-              <li>Enhance agents with autonomous capabilities</li>
-              <li>Create and manage automated processes with Power Automate</li>
-              <li>Create and manage canvas apps with Power Apps</li>
-              <li>Secure AI solutions in the cloud</li>
-            </ul>
-          </li>
-          <li>
-            Hugging Face
-            <ul className="cred-sub">
-              <li>
-                AI Agents Course <span className="meta">certificate</span>
+      <section className="band" id="work">
+        <h2 className="band-label">Work</h2>
+        <div className="band-body">
+          <ul className="work-list">
+            {work.map((item) => (
+              <li key={item.slug}>
+                <Link className="work-row" href={`/work/${item.slug}/`}>
+                  <h3 className="work-title">{item.title}</h3>
+                  <div className="work-meta">
+                    <span className="tag">{item.tags.join(" · ")}</span>
+                    <span className="work-arrow" aria-hidden="true">
+                      →
+                    </span>
+                  </div>
+                  <p className="work-blurb">{item.blurb}</p>
+                </Link>
               </li>
-              <li>MCP Course Unit 1</li>
-              <li>Context course</li>
-              <li>
-                LLM Course <span className="meta">in progress</span>
-              </li>
-            </ul>
-          </li>
-          <li>Snowflake Hands-On Essentials Badge 1</li>
-          {/* TODO Overlord: confirm exact IBM SkillsBuild badge name */}
-          <li>IBM SkillsBuild</li>
-          <li>Google Cloud Skills Boost: generative AI learning</li>
-          <li>
-            AWS Skill Builder Agentic AI Demonstrated{" "}
-            <span className="meta">in progress</span>
-          </li>
-        </ul>
-        {/* TODO Overlord: Copilot Studio Applied Skills retake pending - do not list as earned */}
-      </section>
-
-      <section className="section" id="contact">
-        <h2>Contact</h2>
-        <ul className="contact-list">
-          <li>
-            GitHub:{" "}
-            <a href={site.github} rel="noopener noreferrer">
-              github.com/{site.githubUser}
+            ))}
+          </ul>
+          <p className="venode-note">
+            Venode Labs is where I build and test agent and ops-automation work.
+            Site:{" "}
+            <a href={site.venode} rel="noopener noreferrer">
+              venode.ai
             </a>
-          </li>
-          {/* TODO Overlord: set contact.linkedin in src/lib/site.config.ts to render LinkedIn */}
-          {site.linkedin ? (
+            .
+          </p>
+        </div>
+      </section>
+
+      <section className="band" id="credentials">
+        <h2 className="band-label">Credentials</h2>
+        <div className="band-body">
+          <dl className="cred-grid">
+            <div className="cred-row">
+              <dt>Harvard</dt>
+              <dd>
+                <div className="cred-item">
+                  <span>CS50&apos;s Introduction to AI with Python</span>
+                  <span className="tag tag-status">completed</span>
+                </div>
+              </dd>
+            </div>
+
+            <div className="cred-row">
+              <dt>Microsoft</dt>
+              <dd>
+                <ul className="cred-items">
+                  <li className="cred-item">
+                    <span>Applied Skills: Enhance agents with autonomous capabilities</span>
+                  </li>
+                  <li className="cred-item">
+                    <span>
+                      Applied Skills: Create and manage automated processes with
+                      Power Automate
+                    </span>
+                  </li>
+                  <li className="cred-item">
+                    <span>
+                      Applied Skills: Create and manage canvas apps with Power
+                      Apps
+                    </span>
+                  </li>
+                  <li className="cred-item">
+                    <span>Applied Skills: Secure AI solutions in the cloud</span>
+                  </li>
+                </ul>
+              </dd>
+            </div>
+
+            <div className="cred-row">
+              <dt>Hugging Face</dt>
+              <dd>
+                <ul className="cred-items">
+                  <li className="cred-item">
+                    <span>AI Agents Course</span>
+                    <span className="tag tag-status">certificate</span>
+                  </li>
+                  <li className="cred-item">
+                    <span>MCP Course Unit 1</span>
+                  </li>
+                  <li className="cred-item">
+                    <span>Context course</span>
+                  </li>
+                  <li className="cred-item">
+                    <span>LLM Course</span>
+                    <span className="tag tag-status">in progress</span>
+                  </li>
+                </ul>
+              </dd>
+            </div>
+
+            <div className="cred-row">
+              <dt>Snowflake</dt>
+              <dd>
+                <div className="cred-item">
+                  <span>Hands-On Essentials Badge 1</span>
+                </div>
+              </dd>
+            </div>
+
+            {/* TODO Overlord: confirm exact IBM SkillsBuild badge name */}
+            <div className="cred-row">
+              <dt>IBM</dt>
+              <dd>
+                <div className="cred-item">
+                  <span>SkillsBuild</span>
+                </div>
+              </dd>
+            </div>
+
+            <div className="cred-row">
+              <dt>Google Cloud</dt>
+              <dd>
+                <div className="cred-item">
+                  <span>Skills Boost: generative AI learning</span>
+                </div>
+              </dd>
+            </div>
+
+            <div className="cred-row">
+              <dt>AWS</dt>
+              <dd>
+                <div className="cred-item">
+                  <span>Skill Builder Agentic AI Demonstrated</span>
+                  <span className="tag tag-status">in progress</span>
+                </div>
+              </dd>
+            </div>
+          </dl>
+          {/* TODO Overlord: Copilot Studio Applied Skills retake pending - do not list as earned */}
+        </div>
+      </section>
+
+      <section className="band" id="contact">
+        <h2 className="band-label">Contact</h2>
+        <div className="band-body">
+          <ul className="contact-rows">
             <li>
-              LinkedIn:{" "}
-              <a href={site.linkedin} rel="noopener noreferrer">
-                LinkedIn
+              <span className="contact-label">GitHub</span>
+              <a href={site.github} rel="noopener noreferrer">
+                github.com/{site.githubUser}
               </a>
             </li>
-          ) : null}
-          {/* TODO Overlord: set contact.email in src/lib/site.config.ts to render email */}
-          {site.email ? (
-            <li>
-              Email: <a href={`mailto:${site.email}`}>{site.email}</a>
-            </li>
-          ) : null}
-        </ul>
+            {/* TODO Overlord: set contact.linkedin in src/lib/site.config.ts */}
+            {site.linkedin ? (
+              <li>
+                <span className="contact-label">LinkedIn</span>
+                <a href={site.linkedin} rel="noopener noreferrer">
+                  LinkedIn
+                </a>
+              </li>
+            ) : null}
+            {site.email ? (
+              <li>
+                <span className="contact-label">Email</span>
+                <a href={`mailto:${site.email}`}>{site.email}</a>
+              </li>
+            ) : null}
+          </ul>
+        </div>
       </section>
     </div>
   );

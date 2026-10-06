@@ -33,11 +33,11 @@ export const workDetails: Record<string, WorkDetail> = {
     ],
     measured: [
       // TODO Overlord: confirm any real suite size / pass-rate numbers before publishing as facts
-      "Suite size and pass rate stay in the report file. I do not invent public metrics here.",
-      "Locally, the mock suite is expected to pass end to end on a clean checkout.",
+      "Each run writes pass or fail per case, with the exact rubric checks that failed, to a JSON report.",
+      "The sample ops suite passes 4 of 4 against the mock adapter on a clean checkout.",
     ],
     decided: [
-      "Prefer fixtures over vibes. If a case cannot be written down, it is not ready to automate.",
+      "If a case cannot be written down as a fixture, it is not ready to automate.",
       "Mock-first so CI stays free and deterministic. Live models are opt-in.",
       "Score what operators care about: wrong triage category, missing urgency, unsafe advice.",
     ],

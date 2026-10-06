@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { work } from "@/lib/site";
 import { workDetails } from "@/lib/work-content";
 
 type Params = { slug: string };
@@ -29,63 +30,77 @@ export default async function WorkPage({
   const item = workDetails[slug];
   if (!item) notFound();
 
+  const listing = work.find((w) => w.slug === slug);
+
   return (
-    <article className="narrow prose">
-      <Link className="back" href="/#work">
-        ← Work
-      </Link>
-      <h1>{item.title}</h1>
-      <p className="note">{item.blurb}</p>
+    <div className="wrap">
+      <article className="band">
+        <p className="band-label">Work</p>
+        <div className="band-body reading prose">
+          <Link className="back" href="/#work">
+            ← Work
+          </Link>
+          <h1>{item.title}</h1>
+          {listing ? (
+            <div className="work-hero-meta">
+              <span className="tag">{listing.tags.join(" · ")}</span>
+            </div>
+          ) : null}
+          <p className="lede" style={{ fontSize: "1.125rem" }}>
+            {item.blurb}
+          </p>
 
-      <h2>Problem</h2>
-      {item.problem.map((p) => (
-        <p key={p}>{p}</p>
-      ))}
+          <h2>Problem</h2>
+          {item.problem.map((p) => (
+            <p key={p}>{p}</p>
+          ))}
 
-      <h2>Approach</h2>
-      {item.approach.map((p) => (
-        <p key={p}>{p}</p>
-      ))}
+          <h2>Approach</h2>
+          {item.approach.map((p) => (
+            <p key={p}>{p}</p>
+          ))}
 
-      {item.diagram ? (
-        <div className="diagram">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={`/diagrams/${item.diagram}`}
-            alt={`Architecture diagram for ${item.title}`}
-            width={720}
-            height={320}
-          />
+          {item.diagram ? (
+            <div className="diagram">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/diagrams/${item.diagram}`}
+                alt={`Architecture diagram for ${item.title}`}
+                width={720}
+                height={320}
+              />
+            </div>
+          ) : null}
+
+          <h2>What I shipped</h2>
+          <ul>
+            {item.shipped.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ul>
+
+          <h2>What I measured</h2>
+          <ul>
+            {item.measured.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ul>
+
+          <h2>What I decided</h2>
+          <ul>
+            {item.decided.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ul>
+
+          <h2>What I would do differently</h2>
+          <ul>
+            {item.differently.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ul>
         </div>
-      ) : null}
-
-      <h2>What I shipped</h2>
-      <ul>
-        {item.shipped.map((p) => (
-          <li key={p}>{p}</li>
-        ))}
-      </ul>
-
-      <h2>What I measured</h2>
-      <ul>
-        {item.measured.map((p) => (
-          <li key={p}>{p}</li>
-        ))}
-      </ul>
-
-      <h2>What I decided</h2>
-      <ul>
-        {item.decided.map((p) => (
-          <li key={p}>{p}</li>
-        ))}
-      </ul>
-
-      <h2>What I would do differently</h2>
-      <ul>
-        {item.differently.map((p) => (
-          <li key={p}>{p}</li>
-        ))}
-      </ul>
-    </article>
+      </article>
+    </div>
   );
 }
