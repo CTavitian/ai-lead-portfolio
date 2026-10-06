@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" role="img" aria-label="Eval harness flow">
+  <rect width="720" height="280" fill="#fcfbf7"/>
+  <g font-family="Georgia, serif" font-size="14" fill="#1c1b19">
+    <rect x="40" y="100" width="130" height="60" fill="none" stroke="#1c1b19" stroke-width="1.5"/>
+    <text x="105" y="135" text-anchor="middle">YAML suite</text>
+    <path d="M170 130 H230" stroke="#1c1b19" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <rect x="230" y="100" width="130" height="60" fill="none" stroke="#1c1b19" stroke-width="1.5"/>
+    <text x="295" y="135" text-anchor="middle">CLI runner</text>
+    <path d="M360 130 H420" stroke="#1c1b19" stroke-width="1.5" fill="none"/>
+    <rect x="420" y="40" width="140" height="50" fill="none" stroke="#6e3b2b" stroke-width="1.5"/>
+    <text x="490" y="70" text-anchor="middle" fill="#6e3b2b">Mock agent</text>
+    <rect x="420" y="170" width="140" height="50" fill="none" stroke="#1c1b19" stroke-width="1.5"/>
+    <text x="490" y="200" text-anchor="middle">Live adapter</text>
+    <path d="M360 130 C390 130 390 65 420 65" stroke="#6e3b2b" stroke-width="1.5" fill="none"/>
+    <path d="M360 130 C390 130 390 195 420 195" stroke="#1c1b19" stroke-width="1.5" fill="none"/>
+    <path d="M560 65 H600 V130 H620" stroke="#1c1b19" stroke-width="1.5" fill="none"/>
+    <path d="M560 195 H600 V130" stroke="#1c1b19" stroke-width="1.5" fill="none"/>
+    <rect x="620" y="100" width="60" height="60" fill="none" stroke="#1c1b19" stroke-width="1.5"/>
+    <text x="650" y="128" text-anchor="middle">Rubric</text>
+    <text x="650" y="146" text-anchor="middle">score</text>
+  </g>
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6" fill="none" stroke="#1c1b19"/>
+    </marker>
+  </defs>
+</svg>

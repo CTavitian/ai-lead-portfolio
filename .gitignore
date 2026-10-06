@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+dist/
+coverage/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+tools/agent-eval-harness/node_modules/
+tools/agent-eval-harness/dist/
+tools/agent-eval-harness/reports/
