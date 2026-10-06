@@ -27,7 +27,7 @@ export const workDetails: Record<string, WorkDetail> = {
       "Keep the rubric boring: required keywords, forbidden phrases, JSON shape, and simple length bounds.",
     ],
     shipped: [
-      "In-repo tool at tools/agent-eval-harness with npm run eval, sample ops suites, and vitest coverage.",
+      "Public repo CTavitian/agent-eval-harness: CLI, sample ops suites, and vitest coverage.",
       "JSON report writer plus a plain console summary.",
       "Optional MCP tool stub so a host can call the same scorer later.",
     ],
@@ -65,7 +65,7 @@ export const workDetails: Record<string, WorkDetail> = {
     shipped: [
       "Practical reporting and LLM-assisted workflows in day-to-day ops work, wrapped into small Python and SQL tools where the pattern stuck.",
       "A public sample suite in the eval harness for job-scheduling and defect-triage prompts.",
-      // TODO Overlord: name any public Venode/Fire OS artefacts only if Casper approves disclosure
+      // TODO Overlord: name any public Fire OS artefacts only if Casper approves disclosure
     ],
     measured: [
       // TODO Overlord: confirm qualitative claims only; no invented cycle-time or cost numbers

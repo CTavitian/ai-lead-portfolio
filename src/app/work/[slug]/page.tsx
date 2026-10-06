@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { work } from "@/lib/site";
+import { site, work } from "@/lib/site";
 import { workDetails } from "@/lib/work-content";
 
 type Params = { slug: string };
@@ -49,6 +49,14 @@ export default async function WorkPage({
           <p className="lede" style={{ fontSize: "1.125rem" }}>
             {item.blurb}
           </p>
+          {slug === "agent-eval-harness" ? (
+            <p className="note">
+              Source:{" "}
+              <a href={site.harnessRepo} rel="noopener noreferrer">
+                github.com/CTavitian/agent-eval-harness
+              </a>
+            </p>
+          ) : null}
 
           <h2>Problem</h2>
           {item.problem.map((p) => (
