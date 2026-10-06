@@ -63,57 +63,42 @@ export default function HomePage() {
         <div className="band-body">
           <dl className="cred-grid">
             <div className="cred-row">
-              <dt>Harvard</dt>
-              <dd>
-                <div className="cred-item">
-                  <span>CS50&apos;s Introduction to AI with Python</span>
-                  <span className="tag tag-status">completed</span>
-                </div>
-              </dd>
-            </div>
-
-            <div className="cred-row">
-              <dt>Microsoft</dt>
+              <dt>AI / agents</dt>
               <dd>
                 <ul className="cred-items">
                   <li className="cred-item">
-                    <span>Applied Skills: Enhance agents with autonomous capabilities</span>
+                    <span>Harvard CS50&apos;s Introduction to AI with Python</span>
+                  </li>
+                  <li className="cred-item">
+                    <span>Microsoft Applied Skills: Enhance agents with autonomous capabilities</span>
                   </li>
                   <li className="cred-item">
                     <span>
-                      Applied Skills: Create and manage automated processes with
-                      Power Automate
+                      Microsoft Applied Skills: Create and manage automated
+                      processes with Power Automate
                     </span>
                   </li>
                   <li className="cred-item">
                     <span>
-                      Applied Skills: Create and manage canvas apps with Power
-                      Apps
+                      Microsoft Applied Skills: Create and manage canvas apps
+                      with Power Apps
                     </span>
                   </li>
                   <li className="cred-item">
-                    <span>Applied Skills: Secure AI solutions in the cloud</span>
+                    <span>Microsoft Applied Skills: Secure AI solutions in the cloud</span>
                   </li>
-                </ul>
-              </dd>
-            </div>
-
-            <div className="cred-row">
-              <dt>Hugging Face</dt>
-              <dd>
-                <ul className="cred-items">
                   <li className="cred-item">
-                    <span>AI Agents Course</span>
+                    <span>Hugging Face AI Agents Course</span>
                     <span className="tag tag-status">certificate</span>
                   </li>
                   <li className="cred-item">
-                    <span>MCP Course Unit 1</span>
+                    <span>Hugging Face MCP Course Unit 1</span>
                   </li>
                   <li className="cred-item">
-                    <span>Context course</span>
+                    <span>Hugging Face Context course</span>
                   </li>
                   <li className="cred-item">
-                    <span>LLM Course</span>
+                    <span>Hugging Face LLM Course</span>
                     <span className="tag tag-status">in progress</span>
                   </li>
                 </ul>
@@ -121,40 +106,28 @@ export default function HomePage() {
             </div>
 
             <div className="cred-row">
-              <dt>Snowflake</dt>
+              <dt>Cloud &amp; data</dt>
               <dd>
-                <div className="cred-item">
-                  <span>Hands-On Essentials Badge 1</span>
-                </div>
-              </dd>
-            </div>
-
-            {/* TODO Overlord: confirm exact IBM SkillsBuild badge name */}
-            <div className="cred-row">
-              <dt>IBM</dt>
-              <dd>
-                <div className="cred-item">
-                  <span>SkillsBuild</span>
-                </div>
+                <ul className="cred-items">
+                  <li className="cred-item">
+                    <span>Snowflake Hands-On Essentials Badge 1</span>
+                  </li>
+                  <li className="cred-item">
+                    <span>Google Cloud Skills Boost: generative AI learning</span>
+                  </li>
+                </ul>
               </dd>
             </div>
 
             <div className="cred-row">
-              <dt>Google Cloud</dt>
+              <dt>In progress</dt>
               <dd>
-                <div className="cred-item">
-                  <span>Skills Boost: generative AI learning</span>
-                </div>
-              </dd>
-            </div>
-
-            <div className="cred-row">
-              <dt>AWS</dt>
-              <dd>
-                <div className="cred-item">
-                  <span>Skill Builder Agentic AI Demonstrated</span>
-                  <span className="tag tag-status">in progress</span>
-                </div>
+                <ul className="cred-items">
+                  <li className="cred-item">
+                    <span>AWS Skill Builder Agentic AI Demonstrated</span>
+                    <span className="tag tag-status">in progress</span>
+                  </li>
+                </ul>
               </dd>
             </div>
           </dl>
@@ -165,29 +138,29 @@ export default function HomePage() {
       <section className="band" id="contact">
         <h2 className="band-label">Contact</h2>
         <div className="band-body">
-          <ul className="contact-rows">
-            <li>
-              <span className="contact-label">GitHub</span>
-              <a href={site.github} rel="noopener noreferrer">
-                github.com/{site.githubUser}
-              </a>
-            </li>
-            {/* TODO Overlord: set contact.linkedin in src/lib/site.config.ts */}
+          <p className="contact-line">
+            {site.email ? (
+              <a href={`mailto:${site.email}`}>{site.email}</a>
+            ) : null}
+            {site.email ? (
+              <span className="contact-sep" aria-hidden="true">
+                ·
+              </span>
+            ) : null}
+            <a href={site.github} rel="noopener noreferrer">
+              GitHub
+            </a>
             {site.linkedin ? (
-              <li>
-                <span className="contact-label">LinkedIn</span>
+              <>
+                <span className="contact-sep" aria-hidden="true">
+                  ·
+                </span>
                 <a href={site.linkedin} rel="noopener noreferrer">
                   LinkedIn
                 </a>
-              </li>
+              </>
             ) : null}
-            {site.email ? (
-              <li>
-                <span className="contact-label">Email</span>
-                <a href={`mailto:${site.email}`}>{site.email}</a>
-              </li>
-            ) : null}
-          </ul>
+          </p>
         </div>
       </section>
     </div>
