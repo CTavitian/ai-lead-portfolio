@@ -321,13 +321,6 @@ main {
   margin-left: var(--space-1);
 }
 
-.venode-note {
-  margin-top: var(--space-4);
-  padding-top: var(--space-3);
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.95rem;
-}
 
 /* Credentials definition list */
 .cred-grid {

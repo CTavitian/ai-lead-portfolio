@@ -8,7 +8,6 @@ export const site = {
   githubUser: contact.githubUser,
   linkedin: contact.linkedin,
   email: contact.email,
-  venode: "https://venode.ai",
   repo: "https://github.com/CTavitian/ai-lead-portfolio",
   workRights: "Sydney-based, full Australian work rights",
 } as const;

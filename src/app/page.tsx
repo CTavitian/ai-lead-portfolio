@@ -47,14 +47,6 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
-          <p className="venode-note">
-            Venode Labs is where I build and test agent and ops-automation work.
-            Site:{" "}
-            <a href={site.venode} rel="noopener noreferrer">
-              venode.ai
-            </a>
-            .
-          </p>
         </div>
       </section>
 
