@@ -19,18 +19,20 @@ export default function HomePage() {
           <h1>{site.name}</h1>
           <p className="role">{site.role}</p>
           <p className="lede">
-            I build the checks that decide whether an AI agent is safe to put
-            near real work: evaluation harnesses, trajectory checkers, approval
-            gates and tool allow lists, all runnable without an API key.
-            Before this I spent years in engineering, delivery and service
-            operations, so I know which failures matter on a job and which are
-            noise.
+            I have spent 14 years running service and project delivery in
+            construction and fire protection, from estimating and tenders to
+            profit and loss for a division. Lately I have been working out
+            where AI actually helps in that kind of business: which jobs are
+            worth automating, which need a person to sign off, and how to
+            test an agent before anyone relies on it. The projects below are
+            small tools I built to learn that properly. I am looking for a
+            role where I can do this at work.
           </p>
         </div>
       </section>
 
       <section className="band" id="work">
-        <h2 className="band-label">Work</h2>
+        <h2 className="band-label">Projects</h2>
         <div className="band-body">
           <ul className="work-list">
             {featured.map((item) => (
@@ -39,7 +41,7 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
-          <h3 className="work-subhead">More tools and write-ups</h3>
+          <h3 className="work-subhead">Smaller projects and write-ups</h3>
           <ul className="work-list">
             {more.map((item) => (
               <li key={item.slug}>
@@ -85,77 +87,48 @@ export default function HomePage() {
         <div className="band-body">
           <dl className="cred-grid">
             <div className="cred-row">
-              <dt>Harvard</dt>
-              <dd>
-                <div className="cred-item">
-                  <span>CS50&apos;s Introduction to AI with Python</span>
-                  <span className="tag tag-status">completed</span>
-                </div>
-              </dd>
-            </div>
-            <div className="cred-row">
-              <dt>Microsoft</dt>
-              <dd>
-                <ul className="cred-items">
-                  <li className="cred-item">
-                    <span>
-                      Applied Skills: Enhance agents with autonomous capabilities
-                    </span>
-                  </li>
-                  <li className="cred-item">
-                    <span>
-                      Applied Skills: Create and manage automated processes with
-                      Power Automate
-                    </span>
-                  </li>
-                  <li className="cred-item">
-                    <span>
-                      Applied Skills: Create and manage canvas apps with Power
-                      Apps
-                    </span>
-                  </li>
-                  <li className="cred-item">
-                    <span>Applied Skills: Secure AI solutions in the cloud</span>
-                  </li>
-                </ul>
-              </dd>
-            </div>
-            <div className="cred-row">
               <dt>Hugging Face</dt>
               <dd>
                 <ul className="cred-items">
                   <li className="cred-item">
-                    <span>AI Agents Course</span>
-                    <span className="tag tag-status">certificate</span>
+                    <span>AI Agents Course, with certificate of excellence</span>
                   </li>
                   <li className="cred-item">
-                    <span>MCP Course Unit 1</span>
+                    <span>Agents Fundamentals</span>
+                  </li>
+                  <li className="cred-item">
+                    <span>Smol Course</span>
                   </li>
                   <li className="cred-item">
                     <span>Context course</span>
-                  </li>
-                  <li className="cred-item">
-                    <span>LLM Course</span>
-                    <span className="tag tag-status">in progress</span>
                   </li>
                 </ul>
               </dd>
             </div>
             <div className="cred-row">
-              <dt>Snowflake</dt>
+              <dt>Google Skills</dt>
               <dd>
-                <div className="cred-item">
-                  <span>Hands-On Essentials Badge 1</span>
-                </div>
+                <ul className="cred-items">
+                  <li className="cred-item">
+                    <span>Build Agents with Agent Development Kit</span>
+                  </li>
+                  <li className="cred-item">
+                    <span>Responsible AI: Applying AI Principles</span>
+                  </li>
+                  <li className="cred-item">
+                    <span>Deploy and Scale AI Models with Cloud Run</span>
+                  </li>
+                </ul>
               </dd>
             </div>
             <div className="cred-row">
-              <dt>AWS</dt>
+              <dt>IBM SkillsBuild</dt>
               <dd>
-                <div className="cred-item">
-                  <span>Skill Builder Agentic AI Demonstrated</span>
-                  <span className="tag tag-status">in progress</span>
-                </div>
+                <ul className="cred-items">
+                  <li className="cred-item">
+                    <span>Getting Started with Generative AI</span>
+                  </li>
+                </ul>
               </dd>
             </div>
           </dl>

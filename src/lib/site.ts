@@ -2,7 +2,7 @@ import { contact } from "./site.config";
 
 export const site = {
   name: "Casper Tavitian",
-  role: "Applied AI engineer. Agent evaluation and safe automation for field service.",
+  role: "Operations leader moving into applied AI",
   github: contact.github,
   githubUser: contact.githubUser,
   linkedin: contact.linkedin,
@@ -35,7 +35,7 @@ export const work: WorkItem[] = [
     slug: "ops-trajectory-rx",
     title: "Ops trajectory RX",
     blurb:
-      "Trajectory IR for field-service agents. Finds the failing step and names the ops failure mode. TypeScript demo plus a Python core you can run with uv.",
+      "Checks an agent run step by step, finds where it went wrong and names the type of mistake. TypeScript demo plus a Python version.",
     tags: ["TypeScript", "Python", "Evals"],
     repo: "https://github.com/CTavitian/ops-trajectory-rx",
     caseStudy: true,
@@ -44,7 +44,7 @@ export const work: WorkItem[] = [
     slug: "conformal-dispatch",
     title: "Conformal dispatch",
     blurb:
-      "Risk scoring with conformal abstention: commit, escalate, or hold. Coverage is measured, not marketed. TypeScript demo plus a Python core you can run with uv.",
+      "Scores risk, then decides to go ahead, escalate or hold, and holds back when it is unsure. Reports how often it was right. TypeScript demo plus a Python version.",
     tags: ["TypeScript", "Python", "Predictive"],
     repo: "https://github.com/CTavitian/conformal-dispatch",
     caseStudy: true,
@@ -53,7 +53,7 @@ export const work: WorkItem[] = [
     slug: "field-skill-forge",
     title: "Field skill forge",
     blurb:
-      "Packages ops Agent Skills and binary-evals them behind fail-closed layers.",
+      "Packages small field-service skills for an agent and tests them with pass or fail checks.",
     tags: ["TypeScript", "Skills"],
     repo: "https://github.com/CTavitian/field-skill-forge",
   },
@@ -61,7 +61,7 @@ export const work: WorkItem[] = [
     slug: "side-effect-replay",
     title: "Side-effect replay",
     blurb:
-      "Turns a bad agent run into an approval digest that CI can gate on.",
+      "Saves what an agent did in a run so a CI check can fail when it took an action nobody approved.",
     tags: ["TypeScript", "Governance"],
     repo: "https://github.com/CTavitian/side-effect-replay",
   },
@@ -69,7 +69,7 @@ export const work: WorkItem[] = [
     slug: "judgment-panel",
     title: "Judgment panel",
     blurb:
-      "Routes commit, hold, or block across several judges and keeps an evidence ledger.",
+      "Asks several judges to approve, hold or block an action and keeps a record of why.",
     tags: ["TypeScript", "Governance"],
     repo: "https://github.com/CTavitian/judgment-panel",
   },
@@ -77,7 +77,7 @@ export const work: WorkItem[] = [
     slug: "agent-eval-harness",
     title: "Agent evaluation harness",
     blurb:
-      "CLI that runs YAML cases against a mock or live agent and scores the answers.",
+      "Command line tool that runs YAML test cases against a fake or real agent and scores the answers.",
     tags: ["TypeScript", "CLI"],
     repo: "https://github.com/CTavitian/agent-eval-harness",
     caseStudy: true,
@@ -86,7 +86,7 @@ export const work: WorkItem[] = [
     slug: "ops-decision-cli",
     title: "Ops decision CLI",
     blurb:
-      "Scores candidate automation jobs for regulated field-service work. Pure logic, no model.",
+      "Scores which field-service jobs are sensible to automate. Plain logic, no model.",
     tags: ["TypeScript", "CLI"],
     repo: "https://github.com/CTavitian/ops-decision-cli",
   },
@@ -94,7 +94,7 @@ export const work: WorkItem[] = [
     slug: "mcp-tool-boundary",
     title: "MCP tool boundary",
     blurb:
-      "Allow-listed tools plus a red-team suite that fails when something escapes.",
+      "Lets an agent use only an approved list of tools, with tests that fail if it gets around the list.",
     tags: ["TypeScript", "MCP"],
     repo: "https://github.com/CTavitian/mcp-tool-boundary",
   },
@@ -102,7 +102,7 @@ export const work: WorkItem[] = [
     slug: "field-service-agent",
     title: "Field-service agent",
     blurb:
-      "Constrained triage agent over fixtures, held to eval cases.",
+      "A small triage agent held to a set of test cases.",
     tags: ["TypeScript", "Agents"],
     repo: "https://github.com/CTavitian/field-service-agent",
   },
@@ -110,7 +110,7 @@ export const work: WorkItem[] = [
     slug: "secure-ai-checklist",
     title: "Secure AI checklist",
     blurb:
-      "Checklist CLI for tool authZ, logging, PII redaction, and approval gates.",
+      "Checklist tool for tool permissions, logging, hiding personal data and approval steps.",
     tags: ["TypeScript", "CLI"],
     repo: "https://github.com/CTavitian/secure-ai-checklist",
   },
@@ -118,7 +118,7 @@ export const work: WorkItem[] = [
     slug: "ops-automation",
     title: "Ops automation for field service",
     blurb:
-      "How I pick AI work in regulated, schedule-heavy operations, and what I leave alone.",
+      "How I decide which operations jobs are worth automating, and which I would leave to people.",
     tags: ["Write-up"],
     caseStudy: true,
   },

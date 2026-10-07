@@ -1,8 +1,8 @@
-# Casper Tavitian: applied AI portfolio
+# Casper Tavitian
 
-Live site: https://ctavitian.github.io/ai-lead-portfolio/
+Portfolio site: https://ctavitian.github.io/ai-lead-portfolio/
 
-I build the checks that decide whether an AI agent is safe to put near real work. The projects are small, tested and runnable without an API key. The domain is field-service operations, where a wrong action has a real cost.
+I have spent 14 years in construction and fire protection services, running estimating, service delivery and divisional budgets. I am now learning applied AI by building small tools: ways to test an agent, check what it did, and make it stop when it should not act alone. This repo is the site that collects that work.
 
 ![Home at 1440px](shots/home-1440.png)
 
@@ -10,16 +10,14 @@ I build the checks that decide whether an AI agent is safe to put near real work
 
 | Project | What it does |
 | --- | --- |
-| [ops-trajectory-rx](https://github.com/CTavitian/ops-trajectory-rx) | Finds the step where an agent run went wrong and names the failure mode (8-class taxonomy) |
-| [agent-eval-harness](https://github.com/CTavitian/agent-eval-harness) | CLI that runs YAML eval suites against mock or live agents |
-| [side-effect-replay](https://github.com/CTavitian/side-effect-replay) | Freezes agent runs into traces and gates CI on approval digests |
-| [conformal-dispatch](https://github.com/CTavitian/conformal-dispatch) | Risk scoring that abstains (commit, escalate, hold) with measured coverage |
+| [ops-trajectory-rx](https://github.com/CTavitian/ops-trajectory-rx) | Checks an agent run step by step and names the type of mistake |
+| [agent-eval-harness](https://github.com/CTavitian/agent-eval-harness) | Runs YAML test cases against a fake or real agent and scores the answers |
+| [side-effect-replay](https://github.com/CTavitian/side-effect-replay) | Records what an agent did so CI can fail on an unapproved action |
+| [conformal-dispatch](https://github.com/CTavitian/conformal-dispatch) | Scores risk and holds back when it is unsure |
 
-Smaller tools: `field-skill-forge`, `judgment-panel`, `mcp-tool-boundary`, `field-service-agent`, `ops-decision-cli`, `secure-ai-checklist`.
+The smaller projects are listed on the site. The sample data in all of them is made up and labelled as such.
 
-## This site
-
-Static Next.js (App Router, TypeScript) export, no trackers, IBM Plex and Newsreader served locally. The eval harness lives in `tools/agent-eval-harness` and runs in CI before every deploy.
+## Running it
 
 ```bash
 npm install
@@ -27,8 +25,10 @@ npm run test:harness
 BASE_PATH= npm run build && npx serve out
 ```
 
-`BASE_PATH` defaults to `/ai-lead-portfolio` for GitHub Pages. Set it empty for Vercel or a local preview at `/`.
+`BASE_PATH` defaults to `/ai-lead-portfolio` for GitHub Pages. Leave it empty for a local preview.
+
+Built with Next.js and TypeScript as a static export, with no trackers.
 
 ## Licence
 
-MIT (code). Writing stays with the author.
+MIT for the code. The writing is mine.

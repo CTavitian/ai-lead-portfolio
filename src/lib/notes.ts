@@ -9,67 +9,41 @@ export type Note = {
 export const notes: Note[] = [
   {
     slug: "localize-the-failure-step",
-    title: "Pass/fail is not enough: localise the failure step",
+    title: "A failed test should say which step failed",
     date: "2026-10-07",
     summary:
-      "Trajectory invariants and a field-service failure taxonomy beat a single red checkmark.",
+      "Why I check each step of an agent run instead of looking at one pass or fail.",
     body: [
-      "A failing case is useful. Knowing that step 2 closed a defect without an inspection stamp is actionable. That gap is the difference between a suite runner and a diagnostic lab.",
-      "ops-trajectory-rx keeps a small trajectory IR: observe, tool, decide, approve, side effect. Static invariants catch deny-list tools and inspect-before-close. Dynamic ones catch SLA-before-reschedule and asset mismatches.",
-      "The mock judge is deterministic on purpose. CI stays green without API keys. Taxonomy labels (skip-inspection, approval-bypass, hallucinated-asset, and the rest) map to different fixes, not one generic \"agent failed.\"",
-      "I still run YAML case suites. Trajectories sit on top when the question is where the run went wrong, not only whether it did.",
-    ],
-  },
-  {
-    slug: "abstain-when-uncertain",
-    title: "Abstain when the interval is wide",
-    date: "2026-10-07",
-    summary:
-      "Conformal prediction turns a risk score into commit, escalate, or hold, with honest coverage limits.",
-    body: [
-      "Point estimates invite overconfidence. For dispatch I want an interval and a prediction set. If low and high both look plausible, the system holds.",
-      "conformal-dispatch scores risk from synthetic telemetry features, then applies split conformal calibration. The gate is boring: narrow low risk can commit (except criticality-3), high lean escalates, ambiguous sets hold.",
-      "Tests check coverage against a target, not a marketing number. Fixtures are synthetic and labelled as such. That honesty matters more than a polished demo.",
-      "Predictive work only belongs next to agents when uncertainty can refuse the action.",
+      "A failing test only tells you something broke. Knowing that step 2 closed a defect before the inspection was recorded tells you what to fix.",
+      "In ops-trajectory-rx I describe a run as a list of steps: observe, tool call, decision, approval and side effect. Rules then check each step, for example that an inspection comes before a close.",
+      "The checker is plain rules, not a model, so it gives the same answer every time and runs in CI without an API key. Each failure gets one of eight labels, because skipping an inspection and approving without permission need different fixes.",
+      "I still keep simple YAML test cases for quick checks. The step-by-step view is for when I need to know where a run went wrong.",
     ],
   },
   {
     slug: "fixtures-not-demos",
-    title: "Why agent demos fail without fixtures",
+    title: "Why I write test cases before trusting an agent demo",
     date: "2026-10-06",
     summary:
-      "A chat window hides the second edge case. Fixtures make expected behaviour explicit.",
+      "A chat window hides the second edge case. Written test cases show what you expected.",
     body: [
-      "Most agent demos look fine until you change one detail. The happy path is not the product.",
-      "I write cases as YAML: an input, a rubric, and a pass or fail. Required phrases, forbidden phrases, JSON keys. Boring on purpose.",
-      "The mock adapter keeps CI free and deterministic. Live models are opt-in. If a behaviour cannot be written down, it is not ready to automate.",
-      "That is why the eval harness exists. Not to impress anyone. To catch the skip-inspection answer before it reaches a supervisor.",
+      "Most agent demos look fine until you change one detail. The case that works on stage is not the whole job.",
+      "I write cases in YAML: an input, what the answer must contain, and what it must not contain. It is dull, but I can run it again and get the same result.",
+      "The fake agent keeps CI free and repeatable, and a real model is something you switch on yourself. If I cannot write a case down, I am not ready to automate it.",
+      "That is why I built the eval harness: to catch a wrong answer, like skipping an inspection, before it reaches a supervisor.",
     ],
   },
   {
     slug: "picking-ai-work-in-ops",
-    title: "How I pick AI work in regulated ops",
-    date: "2026-10-05",
+    title: "How I choose what to automate in field service",
+    date: "2026-10-06",
     summary:
-      "High volume, low regret first. Statutory sign-off stays with people who hold the licence.",
+      "Start with frequent, low-risk jobs. Anything with a legal sign-off stays with a person.",
     body: [
-      "Field service is full of repeating paperwork: triage notes, schedule suggestions, digests. Those are good first bets when the data is structured and a bad draft is easy to undo.",
-      "I refuse work that sits on a statutory obligation, or that would let a model close compliance paperwork without a human. That is not caution theatre. It is how regulated service actually works.",
-      "The ops-decision scorer encodes that judgment as bands: pilot, defer, reject. A lead can argue with a score. They should not argue with a reject on licence-gated dispatch.",
-      "Ship the boring version first. Fancy multi-agent graphs come after a single step that removes a recurring manual chore.",
-    ],
-  },
-  {
-    slug: "agents-as-junior-staff",
-    title: "Treat agents like junior staff with limited access",
-    date: "2026-10-04",
-    summary:
-      "Least privilege, read before write, dry-run before commit. Policy in code and tests.",
-    body: [
-      "Tool-using agents are useful and dangerous for the same reason: they can act. Giving a model send_email or shell_exec is like giving a new hire admin rights on day one.",
-      "I keep an allow list in code. Read schedule. List defects. Propose a reschedule that still needs human approval. Denied tools stay denied even if a prompt asks nicely.",
-      "Secrets stay on the host. Irreversible actions need a person. Logging is not optional.",
-      "If a tool cannot be explained to an operations manager in one sentence, the scope is too wide.",
+      "Field service has a lot of repeated paperwork: triage notes, schedule suggestions and summaries. These are good first jobs when the data is structured and a bad draft is easy to throw away.",
+      "I would not automate anything tied to a legal obligation, or let a model close compliance paperwork without a person. That is how regulated work is meant to run.",
+      "The ops-decision-cli project turns this into a score: pilot, defer or reject. A team lead can argue with a score, but a reject on licensed work should be hard to argue with.",
+      "Do the simple version first. Anything more complicated can wait until one small step is clearly saving time.",
     ],
   },
 ];

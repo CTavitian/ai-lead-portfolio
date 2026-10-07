@@ -35,7 +35,7 @@ export default async function WorkPage({
   return (
     <div className="wrap">
       <article className="band">
-        <p className="band-label">Work</p>
+        <p className="band-label">Projects</p>
         <div className="band-body reading prose">
           <Link className="back" href="/#work">
             ← Work
@@ -79,7 +79,7 @@ export default async function WorkPage({
             <div className="diagram">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`/diagrams/${item.diagram}`}
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/diagrams/${item.diagram}`}
                 alt={`Architecture diagram for ${item.title}`}
                 width={720}
                 height={320}
@@ -87,28 +87,28 @@ export default async function WorkPage({
             </div>
           ) : null}
 
-          <h2>What I shipped</h2>
+          <h2>What I built</h2>
           <ul>
             {item.shipped.map((p) => (
               <li key={p}>{p}</li>
             ))}
           </ul>
 
-          <h2>What I measured</h2>
+          <h2>How I checked it</h2>
           <ul>
             {item.measured.map((p) => (
               <li key={p}>{p}</li>
             ))}
           </ul>
 
-          <h2>What I decided</h2>
+          <h2>Choices I made</h2>
           <ul>
             {item.decided.map((p) => (
               <li key={p}>{p}</li>
             ))}
           </ul>
 
-          <h2>What I would do differently</h2>
+          <h2>What I would change</h2>
           <ul>
             {item.differently.map((p) => (
               <li key={p}>{p}</li>

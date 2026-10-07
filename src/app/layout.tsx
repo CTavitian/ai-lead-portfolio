@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Applied AI engineer. Evaluation harnesses, trajectory checkers and approval gates for agents in field-service operations.",
+    "Operations leader with 14 years in construction and fire protection services, building small tools to test where AI helps and where it should not act alone.",
   icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/favicon.svg` },
   openGraph: {
     title: `${site.name} · ${site.role}`,
     description:
-      "Evaluation harnesses, trajectory checkers and approval gates for agents in field-service operations.",
+      "Small tools for testing AI agents in field-service operations, from an operations leader moving into applied AI.",
     type: "website",
     locale: "en_AU",
   },
