@@ -9,6 +9,6 @@ export type ContactConfig = {
 export const contact: ContactConfig = {
   github: "https://github.com/CTavitian",
   githubUser: "CTavitian",
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/ctavitian/",
   email: "ctavityan@gmail.com",
 };
