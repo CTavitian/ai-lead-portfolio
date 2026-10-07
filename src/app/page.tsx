@@ -12,19 +12,14 @@ export default function HomePage() {
         </p>
         <div className="band-body">
           <h1>{site.name}</h1>
-          <p className="role">
-            {site.role}
-            <span className="sep" aria-hidden="true">
-              ·
-            </span>
-            {site.location}
-          </p>
+          <p className="role">{site.role}</p>
           <p className="lede">
-            I spent years running field-service and fire-protection operations.
-            Crews, compliance, margins, and schedules. Now I take that judgment
-            into AI implementation: picking work that pays off, building agents
-            that stay inside clear bounds, and measuring whether the thing
-            actually helps.
+            I moved from an engineering background into business operations,
+            across delivery, service, and the systems that keep work moving.
+            I&apos;m focused on applied AI and business intelligence: analysis,
+            LLM experiments, computational semantics, and agentic development,
+            so operational friction turns into clearer decisions and less
+            repetitive work.
           </p>
         </div>
       </section>

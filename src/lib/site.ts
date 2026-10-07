@@ -2,8 +2,7 @@ import { contact } from "./site.config";
 
 export const site = {
   name: "Casper Tavitian",
-  role: "AI Implementation Lead",
-  location: "Sydney, Australia",
+  role: "Engineer, AI Enthusiast, Developer",
   github: contact.github,
   githubUser: contact.githubUser,
   linkedin: contact.linkedin,

@@ -1,6 +1,6 @@
 # AI Lead portfolio
 
-Personal site for Casper Tavitian (Sydney). Static Next.js export for GitHub Pages or Vercel.
+Personal site for Casper Tavitian. Static Next.js export for GitHub Pages or Vercel.
 
 ![Home at 1440px](shots/home-1440.png)
 

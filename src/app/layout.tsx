@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Sydney-based AI Implementation Lead. Operations background. Practical delivery of agents, evaluations, and ops automation.",
+    "Engineer, AI Enthusiast, Developer. Applied AI and business intelligence: analysis, LLM experiments, computational semantics, and agentic development.",
   icons: { icon: "/favicon.svg" },
 };
 
