@@ -2,7 +2,7 @@ import { contact } from "./site.config";
 
 export const site = {
   name: "Casper Tavitian",
-  role: "Engineer, AI Enthusiast, Developer",
+  role: "Applied AI engineer. Agent evaluation and safe automation for field service.",
   github: contact.github,
   githubUser: contact.githubUser,
   linkedin: contact.linkedin,
@@ -21,6 +21,14 @@ export type WorkItem = {
   /** Internal case-study page under /work/[slug] */
   caseStudy?: boolean;
 };
+
+/** Shown first on the home page; everything else sits under smaller tools. */
+export const featuredSlugs = [
+  "ops-trajectory-rx",
+  "agent-eval-harness",
+  "side-effect-replay",
+  "conformal-dispatch",
+] as const;
 
 export const work: WorkItem[] = [
   {

@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { WorkRow } from "@/components/WorkRow";
 import { notes } from "@/lib/notes";
-import { site, work } from "@/lib/site";
+import { featuredSlugs, site, work } from "@/lib/site";
+
+const featured = featuredSlugs
+  .map((slug) => work.find((w) => w.slug === slug))
+  .filter((w): w is NonNullable<typeof w> => Boolean(w));
+const more = work.filter((w) => !(featuredSlugs as readonly string[]).includes(w.slug));
 
 export default function HomePage() {
   return (
@@ -14,12 +19,12 @@ export default function HomePage() {
           <h1>{site.name}</h1>
           <p className="role">{site.role}</p>
           <p className="lede">
-            I moved from an engineering background into business operations,
-            across delivery, service, and the systems that keep work moving.
-            I&apos;m focused on applied AI and business intelligence: analysis,
-            LLM experiments, computational semantics, and agentic development,
-            so operational friction turns into clearer decisions and less
-            repetitive work.
+            I build the checks that decide whether an AI agent is safe to put
+            near real work: evaluation harnesses, trajectory checkers, approval
+            gates and tool allow lists, all runnable without an API key.
+            Before this I spent years in engineering, delivery and service
+            operations, so I know which failures matter on a job and which are
+            noise.
           </p>
         </div>
       </section>
@@ -28,7 +33,15 @@ export default function HomePage() {
         <h2 className="band-label">Work</h2>
         <div className="band-body">
           <ul className="work-list">
-            {work.map((item) => (
+            {featured.map((item) => (
+              <li key={item.slug}>
+                <WorkRow item={item} />
+              </li>
+            ))}
+          </ul>
+          <h3 className="work-subhead">More tools and write-ups</h3>
+          <ul className="work-list">
+            {more.map((item) => (
               <li key={item.slug}>
                 <WorkRow item={item} />
               </li>
@@ -133,23 +146,6 @@ export default function HomePage() {
               <dd>
                 <div className="cred-item">
                   <span>Hands-On Essentials Badge 1</span>
-                </div>
-              </dd>
-            </div>
-            {/* TODO Overlord: confirm exact IBM SkillsBuild badge name */}
-            <div className="cred-row">
-              <dt>IBM</dt>
-              <dd>
-                <div className="cred-item">
-                  <span>SkillsBuild</span>
-                </div>
-              </dd>
-            </div>
-            <div className="cred-row">
-              <dt>Google Cloud</dt>
-              <dd>
-                <div className="cred-item">
-                  <span>Skills Boost: generative AI learning</span>
                 </div>
               </dd>
             </div>

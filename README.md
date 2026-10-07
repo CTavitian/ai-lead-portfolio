@@ -1,51 +1,33 @@
-# AI Lead portfolio
+# Casper Tavitian: applied AI portfolio
 
-Personal site for Casper Tavitian. Static Next.js export for GitHub Pages or Vercel.
+Live site: https://ctavitian.github.io/ai-lead-portfolio/
+
+I build the checks that decide whether an AI agent is safe to put near real work. The projects are small, tested and runnable without an API key. The domain is field-service operations, where a wrong action has a real cost.
 
 ![Home at 1440px](shots/home-1440.png)
 
-![Home at 390px](shots/home-390.png)
+## Projects
 
-## Stack
+| Project | What it does |
+| --- | --- |
+| [ops-trajectory-rx](https://github.com/CTavitian/ops-trajectory-rx) | Finds the step where an agent run went wrong and names the failure mode (8-class taxonomy) |
+| [agent-eval-harness](https://github.com/CTavitian/agent-eval-harness) | CLI that runs YAML eval suites against mock or live agents |
+| [side-effect-replay](https://github.com/CTavitian/side-effect-replay) | Freezes agent runs into traces and gates CI on approval digests |
+| [conformal-dispatch](https://github.com/CTavitian/conformal-dispatch) | Risk scoring that abstains (commit, escalate, hold) with measured coverage |
 
-- Next.js App Router, TypeScript, `output: 'export'`
-- No trackers
-- Newsreader + Source Sans 3, near-black on off-white, one muted accent
+Smaller tools: `field-skill-forge`, `judgment-panel`, `mcp-tool-boundary`, `field-service-agent`, `ops-decision-cli`, `secure-ai-checklist`.
 
-## Local
+## This site
+
+Static Next.js (App Router, TypeScript) export, no trackers, IBM Plex and Newsreader served locally. The eval harness lives in `tools/agent-eval-harness` and runs in CI before every deploy.
 
 ```bash
 npm install
-BASE_PATH= npm run build
-npx serve out
-```
-
-Default `BASE_PATH` is `/ai-lead-portfolio` for a GitHub Pages project site. Set `BASE_PATH=` for Vercel root or local preview at `/`.
-
-## Eval harness
-
-```bash
 npm run test:harness
-npm run eval:sample
+BASE_PATH= npm run build && npx serve out
 ```
 
-Details: [tools/agent-eval-harness/README.md](tools/agent-eval-harness/README.md)
-
-## Deploy
-
-### GitHub Pages
-
-1. Create public repo `CTavitian/ai-lead-portfolio`
-2. Push this tree
-3. Settings → Pages → GitHub Actions
-4. Workflow: `.github/workflows/pages.yml`
-5. Site URL: `https://ctavitian.github.io/ai-lead-portfolio/`
-
-### Vercel
-
-1. Import the repo
-2. Set env `BASE_PATH` to empty
-3. Build command `npm run build`, output directory `out`
+`BASE_PATH` defaults to `/ai-lead-portfolio` for GitHub Pages. Set it empty for Vercel or a local preview at `/`.
 
 ## Licence
 

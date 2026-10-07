@@ -38,8 +38,15 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Engineer, AI Enthusiast, Developer. Applied AI and business intelligence for operations: clearer decisions, less repetitive work.",
-  icons: { icon: "/favicon.svg" },
+    "Applied AI engineer. Evaluation harnesses, trajectory checkers and approval gates for agents in field-service operations.",
+  icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/favicon.svg` },
+  openGraph: {
+    title: `${site.name} · ${site.role}`,
+    description:
+      "Evaluation harnesses, trajectory checkers and approval gates for agents in field-service operations.",
+    type: "website",
+    locale: "en_AU",
+  },
 };
 
 export default function RootLayout({

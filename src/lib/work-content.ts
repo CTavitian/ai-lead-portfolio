@@ -100,7 +100,6 @@ export const workDetails: Record<string, WorkDetail> = {
       "Optional MCP tool stub so a host can call the same scorer later.",
     ],
     measured: [
-      // TODO Overlord: confirm any real suite size / pass-rate numbers before publishing as facts
       "Each run writes pass or fail per case, with the exact rubric checks that failed, to a JSON report.",
       "The sample ops suite passes 4 of 4 against the mock adapter on a clean checkout.",
     ],
@@ -133,10 +132,8 @@ export const workDetails: Record<string, WorkDetail> = {
     shipped: [
       "Practical reporting and LLM-assisted workflows in day-to-day ops work, wrapped into small Python and SQL tools where the pattern stuck.",
       "A public sample suite in the eval harness for job-scheduling and defect-triage prompts.",
-      // TODO Overlord: name any public Fire OS artefacts only if Casper approves disclosure
     ],
     measured: [
-      // TODO Overlord: confirm qualitative claims only; no invented cycle-time or cost numbers
       "I track whether a workflow removes a recurring manual step, not whether a demo looked clever.",
       "If a draft still needs a full rewrite every time, the prompt or the process is wrong.",
     ],
@@ -171,7 +168,6 @@ export const workDetails: Record<string, WorkDetail> = {
       "An MCP tool stub in the eval harness that exposes scoring as a tool call surface without opening arbitrary shell access.",
     ],
     measured: [
-      // TODO Overlord: confirm any internal audit findings or red-team notes before citing
       "I measure security work by what the agent cannot do, and by whether denials are logged.",
       "A green demo with open tools is not a pass.",
     ],
