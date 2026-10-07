@@ -10,5 +10,5 @@ export const contact: ContactConfig = {
   github: "https://github.com/CTavitian",
   githubUser: "CTavitian",
   linkedin: "",
-  email: "kaspar@venode.ai",
+  email: "ctavityan@gmail.com",
 };
