@@ -3,7 +3,7 @@ import { notes } from "@/lib/notes";
 
 export const metadata = {
   title: "Notes",
-  description: "Short build logs on agents, ops, and evaluation.",
+  description: "Short write-ups on building and gating AI work in operations.",
 };
 
 export default function NotesIndexPage() {
@@ -13,7 +13,7 @@ export default function NotesIndexPage() {
         <h1 className="band-label">Notes</h1>
         <div className="band-body">
           <p className="lede" style={{ fontSize: "1.125rem" }}>
-            Short write-ups on how I build and gate AI work in operations.
+            How I build and gate AI work in operations.
           </p>
           <ul className="work-list">
             {notes.map((n) => (

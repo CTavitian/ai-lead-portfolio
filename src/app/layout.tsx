@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Engineer, AI Enthusiast, Developer. Applied AI and business intelligence: analysis, LLM experiments, computational semantics, and agentic development.",
+    "Engineer, AI Enthusiast, Developer. Applied AI and business intelligence for operations: clearer decisions, less repetitive work.",
   icons: { icon: "/favicon.svg" },
 };
 

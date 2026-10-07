@@ -35,7 +35,7 @@ export default function HomePage() {
             ))}
           </ul>
           <p className="work-foot-note">
-            The tooling and write-ups live in this portfolio repo and related
+            Tooling and write-ups live in this portfolio repo and related
             public repos under{" "}
             <a href={site.github} rel="noopener noreferrer">
               CTavitian

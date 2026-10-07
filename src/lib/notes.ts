@@ -9,14 +9,14 @@ export type Note = {
 export const notes: Note[] = [
   {
     slug: "localize-the-failure-step",
-    title: "Pass/fail is not enough: localize the failure step",
+    title: "Pass/fail is not enough: localise the failure step",
     date: "2026-10-07",
     summary:
       "Trajectory invariants and a field-service failure taxonomy beat a single red checkmark.",
     body: [
-      "A case that fails is useful. Knowing that step 2 closed a defect without an inspection stamp is actionable. That is the gap between a suite runner and a diagnostic lab.",
+      "A failing case is useful. Knowing that step 2 closed a defect without an inspection stamp is actionable. That gap is the difference between a suite runner and a diagnostic lab.",
       "ops-trajectory-rx keeps a small trajectory IR: observe, tool, decide, approve, side effect. Static invariants catch deny-list tools and inspect-before-close. Dynamic ones catch SLA-before-reschedule and asset mismatches.",
-      "The mock judge is deterministic on purpose. CI stays green without API keys. Taxonomy labels (skip-inspection, approval-bypass, hallucinated-asset, and the rest) map to different fixes — not one generic “agent failed.”",
+      "The mock judge is deterministic on purpose. CI stays green without API keys. Taxonomy labels (skip-inspection, approval-bypass, hallucinated-asset, and the rest) map to different fixes, not one generic \"agent failed.\"",
       "I still run YAML case suites. Trajectories sit on top when the question is where the run went wrong, not only whether it did.",
     ],
   },
@@ -25,12 +25,12 @@ export const notes: Note[] = [
     title: "Abstain when the interval is wide",
     date: "2026-10-07",
     summary:
-      "Conformal prediction turns a risk score into commit, escalate, or hold — with honest coverage limits.",
+      "Conformal prediction turns a risk score into commit, escalate, or hold, with honest coverage limits.",
     body: [
-      "Point estimates invite overconfidence. For dispatch, I want an interval and a prediction set. If low and high both remain plausible, the system holds.",
-      "conformal-dispatch uses a simple risk score on synthetic telemetry features, then split conformal calibration. The decision gate is boring: narrow low risk can commit (except criticality-3), high lean escalates, ambiguous sets hold.",
-      "Tests check coverage against a target, not a marketing number. Fixtures are synthetic and labelled as such. That honesty is part of the employer signal.",
-      "Predictive work only earns a place next to agents when uncertainty can refuse the action.",
+      "Point estimates invite overconfidence. For dispatch I want an interval and a prediction set. If low and high both look plausible, the system holds.",
+      "conformal-dispatch scores risk from synthetic telemetry features, then applies split conformal calibration. The gate is boring: narrow low risk can commit (except criticality-3), high lean escalates, ambiguous sets hold.",
+      "Tests check coverage against a target, not a marketing number. Fixtures are synthetic and labelled as such. That honesty matters more than a polished demo.",
+      "Predictive work only belongs next to agents when uncertainty can refuse the action.",
     ],
   },
   {

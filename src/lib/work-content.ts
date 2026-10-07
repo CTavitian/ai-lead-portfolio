@@ -15,7 +15,7 @@ export const workDetails: Record<string, WorkDetail> = {
     slug: "ops-trajectory-rx",
     title: "Ops trajectory RX",
     blurb:
-      "Trajectory IR for field-service agents: invariants, critical-step localization, failure taxonomy. TypeScript demo + Python core (runnable via uv).",
+      "Trajectory IR for field-service agents. Finds the failing step and names the ops failure mode. TypeScript demo plus a Python core you can run with uv.",
     tags: ["TypeScript", "Python", "Evals"],
     repo: "https://github.com/CTavitian/ops-trajectory-rx",
     problem: [
@@ -23,22 +23,22 @@ export const workDetails: Record<string, WorkDetail> = {
       "In field service, skip-inspection, approval bypass, and wrong-asset actions need different fixes. One red checkmark conflates them.",
     ],
     approach: [
-      "Define a small trajectory.v1 IR: observe, tool, decide, approve, side_effect.",
-      "Encode static and dynamic invariants in YAML (inspect-before-close, deny tools, SLA before reschedule, asset match).",
-      "Localize the first critical violation into an eight-class taxonomy with a deterministic mock judge — no API key required for CI.",
+      "I defined a small trajectory.v1 IR: observe, tool, decide, approve, side_effect.",
+      "Static and dynamic invariants live in YAML (inspect-before-close, deny tools, SLA before reschedule, asset match).",
+      "The first critical violation is localised into an eight-class taxonomy by a deterministic mock judge. No API key needed for CI.",
     ],
     shipped: [
       "Public repo CTavitian/ops-trajectory-rx: checker CLI, field-service policy, six fixture traces (three pass / three fail).",
-      "Vitest coverage proving planted bugs localize to the expected step and class.",
+      "Vitest coverage that proves planted bugs localise to the expected step and class.",
     ],
     measured: [
       "Each run reports passed/failed, critical_step index, and taxonomy label in JSON.",
-      "Planted skip-inspection and hallucinated-asset fixtures localize to the intended steps in tests.",
+      "Planted skip-inspection and hallucinated-asset fixtures localise to the intended steps in tests.",
     ],
     decided: [
       "Deterministic judges first. LLM judges stay optional adapters.",
       "Domain vocabulary in the schema (job_id, crew, SLA) beats generic chat traces.",
-      "Non-goal: not a hosted observability product and not a full AgentRx clone.",
+      "Not a hosted observability product, and not a full AgentRx clone.",
     ],
     differently: [
       "Add dynamic invariant plugins per customer policy pack.",
@@ -49,7 +49,7 @@ export const workDetails: Record<string, WorkDetail> = {
     slug: "conformal-dispatch",
     title: "Conformal dispatch",
     blurb:
-      "Predictive risk with conformal abstention — commit, escalate, or hold. No fake accuracy claims. TypeScript demo + Python core (runnable via uv).",
+      "Risk scoring with conformal abstention: commit, escalate, or hold. Coverage is measured, not marketed. TypeScript demo plus a Python core you can run with uv.",
     tags: ["TypeScript", "Python", "Predictive"],
     repo: "https://github.com/CTavitian/conformal-dispatch",
     problem: [
@@ -57,17 +57,17 @@ export const workDetails: Record<string, WorkDetail> = {
       "Regulated dispatch needs an explicit abstain path when the model is unsure.",
     ],
     approach: [
-      "Score failure risk from simple telemetry features (runtime hours, alarm rate, PM age, criticality).",
-      "Wrap scores with split conformal calibration so each asset gets an interval and a prediction set.",
-      "Map sets to commit / escalate / hold. Criticality-3 never auto-commits.",
+      "Failure risk is scored from simple telemetry features (runtime hours, alarm rate, PM age, criticality).",
+      "Split conformal calibration wraps each score so every asset gets an interval and a prediction set.",
+      "Sets map to commit / escalate / hold. Criticality-3 never auto-commits.",
     ],
     shipped: [
       "Public repo CTavitian/conformal-dispatch: CLI, synthetic fixtures, backtest summary with empirical coverage.",
-      "Tests with a loose coverage band — honest about finite-sample noise, not a fabricated 98% claim.",
+      "Tests use a loose coverage band. Honest about finite-sample noise, not a fabricated 98% claim.",
     ],
     measured: [
       "Holdout empirical coverage is reported against target 1−α on every CLI run.",
-      "Decision counts (commit/escalate/hold) are written into the JSON report.",
+      "Decision counts (commit/escalate/hold) land in the JSON report.",
     ],
     decided: [
       "Abstention is a first-class outcome, not an error.",
@@ -83,16 +83,16 @@ export const workDetails: Record<string, WorkDetail> = {
     slug: "agent-eval-harness",
     title: "Agent evaluation harness",
     blurb:
-      "A small CLI that runs YAML test cases against a mock or live agent and scores the answers.",
+      "CLI that runs YAML cases against a mock or live agent and scores the answers.",
     tags: ["TypeScript", "CLI"],
     problem: [
       "Most agent demos look fine in a chat window and fall apart on the second edge case.",
-      "I needed a way to write expected behaviour as fixtures, run them often, and see pass or fail without hand-waving.",
+      "I needed expected behaviour as fixtures I can re-run, with a clear pass or fail and no hand-waving.",
     ],
     approach: [
-      "Build a tiny TypeScript CLI that loads a YAML suite, calls a pluggable agent adapter, and scores each case with rubric checks.",
-      "Default adapter is a deterministic mock so the suite runs with no API key. An optional OpenAI-compatible adapter reads env vars when you want a live model.",
-      "Keep the rubric boring: required keywords, forbidden phrases, JSON shape, and simple length bounds.",
+      "A small TypeScript CLI loads a YAML suite, calls a pluggable agent adapter, and scores each case with rubric checks.",
+      "The default adapter is a deterministic mock, so the suite runs with no API key. An optional OpenAI-compatible adapter reads env vars when you want a live model.",
+      "The rubric stays boring: required keywords, forbidden phrases, JSON shape, and simple length bounds.",
     ],
     shipped: [
       "Public repo CTavitian/agent-eval-harness: CLI, sample ops suites, and vitest coverage.",
@@ -164,7 +164,7 @@ export const workDetails: Record<string, WorkDetail> = {
     approach: [
       "Least privilege by default. Read before write. Dry-run before commit.",
       "Put policy in code and tests, not in a system prompt that someone will edit later.",
-      "Study Microsoft Applied Skills secure-AI patterns and Hugging Face MCP coursework, then apply the boring controls: scopes, allow-lists, audit logs.",
+      "I studied Microsoft Applied Skills secure-AI patterns and Hugging Face MCP coursework, then applied the boring controls: scopes, allow-lists, audit logs.",
     ],
     shipped: [
       "MCP Course Unit 1 completed. Secure AI Applied Skills assessment passed.",

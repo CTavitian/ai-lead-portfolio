@@ -27,7 +27,7 @@ export const work: WorkItem[] = [
     slug: "ops-trajectory-rx",
     title: "Ops trajectory RX",
     blurb:
-      "Trajectory IR for field-service agents: invariants, critical-step localization, failure taxonomy. TypeScript demo + Python core (runnable via uv).",
+      "Trajectory IR for field-service agents. Finds the failing step and names the ops failure mode. TypeScript demo plus a Python core you can run with uv.",
     tags: ["TypeScript", "Python", "Evals"],
     repo: "https://github.com/CTavitian/ops-trajectory-rx",
     caseStudy: true,
@@ -36,7 +36,7 @@ export const work: WorkItem[] = [
     slug: "conformal-dispatch",
     title: "Conformal dispatch",
     blurb:
-      "Predictive risk with conformal abstention — commit, escalate, or hold. No fake accuracy claims. TypeScript demo + Python core (runnable via uv).",
+      "Risk scoring with conformal abstention: commit, escalate, or hold. Coverage is measured, not marketed. TypeScript demo plus a Python core you can run with uv.",
     tags: ["TypeScript", "Python", "Predictive"],
     repo: "https://github.com/CTavitian/conformal-dispatch",
     caseStudy: true,
@@ -45,7 +45,7 @@ export const work: WorkItem[] = [
     slug: "field-skill-forge",
     title: "Field skill forge",
     blurb:
-      "Package and binary-eval ops Agent Skills with fail-closed layers.",
+      "Packages ops Agent Skills and binary-evals them behind fail-closed layers.",
     tags: ["TypeScript", "Skills"],
     repo: "https://github.com/CTavitian/field-skill-forge",
   },
@@ -53,7 +53,7 @@ export const work: WorkItem[] = [
     slug: "side-effect-replay",
     title: "Side-effect replay",
     blurb:
-      "Freeze bad agent runs into approval-digest CI gates.",
+      "Turns a bad agent run into an approval digest that CI can gate on.",
     tags: ["TypeScript", "Governance"],
     repo: "https://github.com/CTavitian/side-effect-replay",
   },
@@ -61,7 +61,7 @@ export const work: WorkItem[] = [
     slug: "judgment-panel",
     title: "Judgment panel",
     blurb:
-      "Multi-judge commit/hold/block router with an evidence ledger.",
+      "Routes commit, hold, or block across several judges and keeps an evidence ledger.",
     tags: ["TypeScript", "Governance"],
     repo: "https://github.com/CTavitian/judgment-panel",
   },
@@ -69,7 +69,7 @@ export const work: WorkItem[] = [
     slug: "agent-eval-harness",
     title: "Agent evaluation harness",
     blurb:
-      "CLI that runs YAML test cases against a mock or live agent and scores the answers.",
+      "CLI that runs YAML cases against a mock or live agent and scores the answers.",
     tags: ["TypeScript", "CLI"],
     repo: "https://github.com/CTavitian/agent-eval-harness",
     caseStudy: true,
@@ -86,7 +86,7 @@ export const work: WorkItem[] = [
     slug: "mcp-tool-boundary",
     title: "MCP tool boundary",
     blurb:
-      "Allow-listed tools with a red-team suite that fails on escapes.",
+      "Allow-listed tools plus a red-team suite that fails when something escapes.",
     tags: ["TypeScript", "MCP"],
     repo: "https://github.com/CTavitian/mcp-tool-boundary",
   },
@@ -94,7 +94,7 @@ export const work: WorkItem[] = [
     slug: "field-service-agent",
     title: "Field-service agent",
     blurb:
-      "Constrained triage agent over fixtures, gated by eval cases.",
+      "Constrained triage agent over fixtures, held to eval cases.",
     tags: ["TypeScript", "Agents"],
     repo: "https://github.com/CTavitian/field-service-agent",
   },
