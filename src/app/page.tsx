@@ -87,6 +87,23 @@ export default function HomePage() {
         <div className="band-body">
           <dl className="cred-grid">
             <div className="cred-row">
+              <dt>Harvard</dt>
+              <dd>
+                <div className="cred-item">
+                  <span>
+                    CS50&apos;s Introduction to Artificial Intelligence with
+                    Python,{" "}
+                    <a
+                      href="https://cs50.harvard.edu/certificates/80ee8678-3b7c-4cd9-bb8f-5bcd2162564c"
+                      rel="noopener noreferrer"
+                    >
+                      verify certificate
+                    </a>
+                  </span>
+                </div>
+              </dd>
+            </div>
+            <div className="cred-row">
               <dt>Hugging Face</dt>
               <dd>
                 <ul className="cred-items">
