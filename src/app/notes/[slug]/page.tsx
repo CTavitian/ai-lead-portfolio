@@ -44,6 +44,17 @@ export default async function NotePage({
           {note.body.map((p) => (
             <p key={p}>{p}</p>
           ))}
+          {note.examples?.map((e) => (
+            <figure className="evidence" key={e.label}>
+              <figcaption>{e.label}</figcaption>
+              <pre>
+                <code>{e.text}</code>
+              </pre>
+            </figure>
+          ))}
+          {note.after?.map((p) => (
+            <p key={p}>{p}</p>
+          ))}
         </div>
       </article>
     </div>

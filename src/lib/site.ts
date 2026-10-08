@@ -44,7 +44,7 @@ export const work: WorkItem[] = [
     slug: "conformal-dispatch",
     title: "Conformal dispatch",
     blurb:
-      "Scores risk, then decides to go ahead, escalate or hold, and holds back when it is unsure. Reports how often it was right. TypeScript demo plus a Python version.",
+      "Scores risk and returns commit, escalate or hold. On my sample data it holds every asset, which is the open problem. TypeScript demo plus a Python version.",
     tags: ["TypeScript", "Python", "Predictive"],
     repo: "https://github.com/CTavitian/conformal-dispatch",
     caseStudy: true,

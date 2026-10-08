@@ -101,6 +101,20 @@ export default async function WorkPage({
             ))}
           </ul>
 
+          {item.evidence ? (
+            <>
+              <h2>What it produced</h2>
+              {item.evidence.map((e) => (
+                <figure className="evidence" key={e.label}>
+                  <figcaption>{e.label}</figcaption>
+                  <pre>
+                    <code>{e.text}</code>
+                  </pre>
+                </figure>
+              ))}
+            </>
+          ) : null}
+
           <h2>Choices I made</h2>
           <ul>
             {item.decided.map((p) => (
