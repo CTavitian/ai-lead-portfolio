@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${site.name} · ${site.role}`,
     description:
-      "Small tools for testing AI agents in field-service operations, from an operations leader moving into applied AI.",
+      "Small tools for testing AI agents in field-service operations, from an engineer and operations leader with a keen interest in AI.",
     type: "website",
     locale: "en_AU",
   },
